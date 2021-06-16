@@ -3,8 +3,8 @@
 
 ![Banner](https://github.com/Sayak11/theGeekBot/blob/master/gfgpic_1.jpg)
 
-[![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://GitHub.com/GFG-CLUB-KIIT/100-Days-of-Code/releases/)
-[![GitHub stars](https://img.shields.io/github/stars/Naereen/StrapDown.js.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/GFG-CLUB-KIIT/100-Days-of-Code/stargazers/)
+[![GitHub release](https://img.shields.io/github/release/GFG-CLUB-KIIT/100-Days-of-Code.svg)](https://GitHub.com/GFG-CLUB-KIIT/100-Days-of-Code/releases/)
+[![GitHub stars](https://img.shields.io/github/stars/GFG-CLUB-KIIT/100-Days-of-Code.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/GFG-CLUB-KIIT/100-Days-of-Code/stargazers/)
 
 
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/GFG-CLUB-KIIT/100-Days-of-Code?include_prereleases)
