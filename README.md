@@ -12,7 +12,11 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/GFG-CLUB-KIIT/100-Days-of-Code.svg)](https://GitHub.com/GFG-CLUB-KIIT/100-Days-of-Code/graphs/contributors/)
 
 
-
+<a name="about"></a>
+# �𝐀𝐛𝐨𝐮𝐭 -
+Introducing our all-new CP BOOTCAMP, a series of sessions like never before.
+If you are willing to have a strong command over your DS-Algo skills and make CP your best friend, the time is...
+...NOW!!!
 
 
 
