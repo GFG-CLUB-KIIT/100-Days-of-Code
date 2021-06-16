@@ -13,10 +13,9 @@
 
 
 <a name="about"></a>
-# �𝐀𝐛𝐨𝐮𝐭 -
+# 𝐀𝐛𝐨𝐮𝐭 -
 Introducing our all-new CP BOOTCAMP, a series of sessions like never before.
-If you are willing to have a strong command over your DS-Algo skills and make CP your best friend, the time is...
-...NOW!!!
+If you are willing to have a strong command over your DS-Algo skills and make CP your best friend, the time is NOW!!!
 
 
 
