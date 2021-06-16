@@ -12,8 +12,6 @@
 <a href="https://discord.gg/DqRqk2GTNn" target="blank">
 <img src="https://img.shields.io/discord/735303195105951764?label=Join%20Community&logo=discord&style=flat-square" alt="join discord community of GFG KIIT"/>
 </a>
-
-
 <a name="about"></a>
 # 𝐀𝐛𝐨𝐮𝐭 -
 𝙸𝚗𝚝𝚛𝚘𝚍𝚞𝚌𝚒𝚗𝚐 𝚘𝚞𝚛 𝚊𝚕𝚕-𝚗𝚎𝚠 𝙲𝙿 𝙱𝙾𝙾𝚃𝙲𝙰𝙼𝙿, 𝚊 𝚜𝚎𝚛𝚒𝚎𝚜 𝚘𝚏 𝚜𝚎𝚜𝚜𝚒𝚘𝚗𝚜 𝚕𝚒𝚔𝚎 𝚗𝚎𝚟𝚎𝚛 𝚋𝚎𝚏𝚘𝚛𝚎. 𝙸𝚏 𝚢𝚘𝚞 𝚊𝚛𝚎 𝚠𝚒𝚕𝚕𝚒𝚗𝚐 𝚝𝚘 𝚑𝚊𝚟𝚎 𝚊 𝚜𝚝𝚛𝚘𝚗𝚐 𝚌𝚘𝚖𝚖𝚊𝚗𝚍 𝚘𝚟𝚎𝚛 𝚢𝚘𝚞𝚛 𝙳𝚂-𝙰𝚕𝚐𝚘 𝚜𝚔𝚒𝚕𝚕𝚜 𝚊𝚗𝚍 𝚖𝚊𝚔𝚎 𝙲𝙿 𝚢𝚘𝚞𝚛 𝚋𝚎𝚜𝚝 𝚏𝚛𝚒𝚎𝚗𝚍, 𝚝𝚑𝚎 𝚝𝚒𝚖𝚎 𝚒𝚜 𝙽𝙾𝚆!!!
@@ -22,11 +20,8 @@
 # 𝐏𝐨𝐢𝐧𝐭 𝐭𝐨 𝐧𝐨𝐭𝐞 -
 𝙰𝚏𝚝𝚎𝚛 𝚌𝚕𝚘𝚗𝚒𝚗𝚐 𝚝𝚑𝚎 𝚛𝚎𝚙𝚘𝚜𝚒𝚝𝚘𝚛𝚢, 𝚌𝚛𝚎𝚊𝚝𝚎 𝚊 𝚏𝚘𝚕𝚍𝚎𝚛 𝚠𝚒𝚝𝚑 𝚢𝚘𝚞𝚛 𝚗𝚊𝚖𝚎 𝚊𝚗𝚍 𝚛𝚘𝚕𝚕 𝚗𝚘. 𝚊𝚜 𝚝𝚑𝚎 𝚏𝚘𝚕𝚍𝚎𝚛 𝚗𝚊𝚖𝚎 𝚊𝚗𝚍 𝚊𝚍𝚍 𝚊𝚕𝚕 𝚝𝚑𝚎 𝚌𝚘𝚍𝚎𝚜 𝚊𝚗𝚍 𝚊𝚜𝚜𝚒𝚐𝚗𝚖𝚎𝚗𝚝𝚜 𝚒𝚗𝚜𝚒𝚍𝚎 𝚝𝚑𝚊𝚝 𝚏𝚘𝚕𝚍𝚎𝚛.
 
-
-
 <a name="cmd"></a>
 # 𝐆𝐢𝐭 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 - 
-
 
 | Command | Description |
 | ------- | ----------- |
@@ -58,8 +53,6 @@
 
 <a name="contributors"></a>
 # 𝐂𝐨𝐧𝐭𝐫𝐢𝐛𝐮𝐭𝐨𝐫𝐬 -
-![Your Repository's Stats](https://contrib.rocks/image?repo=GFG-CLUB-KIIT/100-Days-of-Code)
-
 <a href="https://github.com/GFG-CLUB-KIIT/100-Days-of-Code/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=GFG-CLUB-KIIT/100-Days-of-Code" />
 </a>
