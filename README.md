@@ -10,3 +10,5 @@
 ![GitHub](https://img.shields.io/github/license/Sayak11/theGeekBot)
 [![Star on GitHub](https://img.shields.io/github/stars/GFG-CLUB-KIIT/100-Days-of-Code.svg?style=social)](https://github.com/all-contributors/all-contributors/stargazers)
  [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+ ## 3. Contributors Badge
+![Your Repository's Stats](https://contrib.rocks/image?repo=GFG-CLUB-KIIT/100-Days-of-Code)
