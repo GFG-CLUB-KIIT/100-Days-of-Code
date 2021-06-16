@@ -52,12 +52,7 @@
 - [Point to note.](#nt)
 - [Git Commands.](#cmd)
 - [Table of contents.](#contents)
-- [License.](#license)
 - [Contributers.](#contributors)
-
-<a name="license"></a>
-# 𝐋𝐢𝐜𝐞𝐧𝐬𝐞 -
-𝚃𝚑𝚒𝚜 𝚙𝚛𝚘𝚓𝚎𝚌𝚝 𝚒𝚜 𝚞𝚗𝚍𝚎𝚛 [GNU General Public License v3.0 License](https://github.com/Sayak11/theGeekBot/blob/add-license-1/LICENSE).
 
 <a name="contributors"></a>
 # 𝐂𝐨𝐧𝐭𝐫𝐢𝐛𝐮𝐭𝐨𝐫𝐬 -
