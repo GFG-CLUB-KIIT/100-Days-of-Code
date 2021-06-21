@@ -1,3 +1,5 @@
+// https://codeforces.com/group/3KEXcb15Io/contest/331925/problem/B
+
 #include<bits/stdc++.h>
 using namespace std;
 #define fo(i,n) for(int i=0;i<n;i++)
