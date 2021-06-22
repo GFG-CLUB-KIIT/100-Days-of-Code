@@ -1,0 +1,48 @@
+//Day2
+//LeetCode: Path With Maximum Minimum Value
+// Question Link: https://www.codingninjas.com/codestudio/problems/path-with-maximum-and-minimum-value_1281861?leftPanelTab=1
+
+//Solution
+
+import java.util.ArrayList;
+import java.util.*;
+public class Solution {
+    static int dir[][]={{0,1},{0,-1},{1,0},{-1,0}};
+	public static int pathWithMaxMinValue(ArrayList<ArrayList<Integer>> arr) {
+	
+        int n=arr.size(); //no of rows
+        int m=arr.get(0).size(); // no. of columns
+        
+        boolean visited[][]=new boolean [n][m];
+        PriorityQueue<int[]> pq =new   PriorityQueue<>((a,b)->b[0]-a[0]);
+        // stores weight, i, j and sort acc to greater weight
+        pq.add(new int[]{arr.get(0).get(0), 0 ,0}); // storing the weight and location at 0,0
+        
+        int minV=Integer.MAX_VALUE;
+        while(!pq.isEmpty())
+        {
+            int temp[]=pq.poll();
+            int w=temp[0];
+            int i=temp[1];
+            int j=temp[2];
+            minV=Math.min(minV,w);
+            if(i==n-1 && j==m-1)
+                return minV;
+            for(int k=0;k<4;k++)
+            {
+                int x=i+dir[k][0];
+                int y=j+dir[k][1];
+                if(x<0 || y<0 ||x>=n ||y>=m)
+                    continue;
+                if(!visited[x][y])
+                {
+                    visited[x][y]=true;
+                    pq.add(new int[]{arr.get(x).get(y),x,y});
+                }
+            }
+          
+        }
+        
+       return minV;   
+	}
+}
