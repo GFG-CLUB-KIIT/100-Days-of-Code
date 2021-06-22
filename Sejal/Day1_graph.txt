@@ -1,0 +1,50 @@
+// LEETCODE 787
+// https://leetcode.com/problems/cheapest-flights-within-k-stops/submissions/
+
+class Solution {
+    public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
+        
+        List<List<int[]>> adj=new ArrayList<>();
+        for(int i=0;i<n;i++)
+        {
+            adj.add(new ArrayList<>());
+        }
+        for(int i=0;i<flights.length;i++)
+        {
+            adj.get(flights[i][0]).add(new int[]{flights[i][1],flights[i][2]});
+        }
+        PriorityQueue<int[]> pq=new PriorityQueue<>((a,b)-> a[1]-b[1]);
+        pq.add(new int[] {src,0,0});  // node, weight, k
+        int visited[][]=new int[n][2];
+        
+        while(!pq.isEmpty())
+        {
+            
+            int temp[]=pq.poll();
+            int u=temp[0];
+          
+            
+            if(u==dst && temp[2]<=k+1)
+                return temp[1];
+            
+            for(int[] nbr:adj.get(u))
+            { 
+                int v=nbr[0];
+                if(visited[v][0]==0)
+                {
+                    pq.add(new int[]{nbr[0],temp[1]+nbr[1],temp[2]+1});
+                    visited[v][0]=temp[1]+nbr[1];
+                    visited[v][1]=temp[2]+1;
+                
+                }
+                else if(visited[v][0]>temp[1]+nbr[1] ||  visited[v][1]>temp[2]+1 )
+                {
+                     pq.add(new int[]{nbr[0],temp[1]+nbr[1],temp[2]+1});
+                    visited[v][0]=temp[1]+nbr[1];
+                    visited[v][1]=temp[2]+1;
+                }
+            
+        }}
+        return -1;
+    }
+}

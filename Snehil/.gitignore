@@ -1,0 +1,7 @@
+# Executables
+*.exe
+*.log
+.vscode
+.cph
+*.cpp.bin
+*.bin
