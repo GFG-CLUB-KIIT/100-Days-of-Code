@@ -1,3 +1,9 @@
+/*
+Problem - Convert an infix expression into its equivalent postfix notation.
+Author - Abhinav Deep
+Date - June 23, 2021
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
