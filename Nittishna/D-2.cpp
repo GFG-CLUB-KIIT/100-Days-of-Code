@@ -37,6 +37,7 @@ int howMany(int what, vector<int> where){
         if (*it == what) {
             ++occurs;
         }
-        return occurs;
+        
     }
+    return occurs;
 }
