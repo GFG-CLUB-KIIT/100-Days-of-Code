@@ -1,5 +1,6 @@
 //https://codeforces.com/contest/339/problem/B
 /*    himanshu070    */
+
 #include <bits/stdc++.h>
 #define ll long long
 #define ld long double
