@@ -1,0 +1,38 @@
+// LEETCODE : 785. Is Graph Bipartite?
+// QUESTION LINK: https://leetcode.com/problems/is-graph-bipartite/
+
+//SOLUTION
+
+class Solution {
+    public boolean isBipartite(int[][] graph) {
+        
+        int n=graph.length;
+        int group[]=new int[n]; // We have two groups and if group[i]=0 means no grp in alloted to that                                     node
+        for(int i=0;i<n;i++)
+        {
+            if(group[i]==0)
+            if(!dfs(i,1,group,graph))
+                return false;
+        }
+        return true;
+    }
+    
+    static boolean dfs(int i,int grpNo,int group[],int[][] graph)
+    {
+    group[i]=grpNo==1?2:1;
+    for(int j:graph[i])
+    {
+        if(group[j]==0)
+        {
+            if(!dfs(j,group[i],group,graph))
+                return false;
+        }
+        else
+        {
+            if(group[i]==group[j])
+                return false;
+        }
+    }
+    return true;
+    }
+}

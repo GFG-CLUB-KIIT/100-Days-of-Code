@@ -1,6 +1,4 @@
-/*
-	Link: https://codeforces.com/contest/1539/problem/C
-*/
+//Problem Link : https://codeforces.com/group/3KEXcb15Io/contest/331925/problem/F
 
 /******************************
      AUTHOR SAKSHAM BHATIA
@@ -75,36 +73,15 @@ ll phin(ll n) {ll number = n; if (n % 2 == 0) {number /= 2; while (n % 2 == 0) n
 /*--------------------------------------------------------------------------------------------------------------------------*/
 
 void solve() {
-    ll n, k, x;
-    cin >> n >> k >> x;
-    vector<ll>v(n);
-    for (ll i = 0; i < n; i++) {
-        cin >> v[i];
+    int n;
+    cin >> n;
+    for (int i = 9; i >= 1; i--) {
+        int k = ((1 << i) - 1) * (1 << (i - 1));
+        if (n % k == 0) {
+            cout << k;
+            return;
+        }
     }
-    sort(all(v));
-    debug(v);
-    vector<ll>v1;
-    for (ll i = 0; i < n - 1; i++) {
-        ll diff = v[i + 1] - v[i];
-        if (diff == x || diff == 0)
-            v1.push_back(0);
-        else if (diff % x == 0)
-            v1.push_back(diff / x - 1);
-        else
-            v1.push_back(diff / x);
-    }
-    debug(v1);
-    sort(all(v1));
-    debug(v1);
-    ll cnt = 0;
-    for (ll i = 0; i < v1.size(); i++) {
-        if (v1[i] <= k)
-            k = k - v1[i];
-        else
-            break;
-        cnt++;
-    }
-    cout << v1.size() - cnt + 1;
 }
 
 int main() {
