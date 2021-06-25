@@ -1,0 +1,31 @@
+// Leetcode 680. Valid Palindrome II
+// Question Link: https://leetcode.com/problems/valid-palindrome-ii/
+
+//SOLUTION
+
+class Solution {
+    static boolean isPallin(char ch[],int low,int high){
+        while(low<=high && ch[low]==ch[high])
+        {
+              low++;
+            high--;
+        }
+        return low>high;
+    }
+    public boolean validPalindrome(String s) {
+        
+        char ch[]=s.toCharArray();
+        int low=0,high=ch.length-1;
+        int f=0;
+        while(low<high && ch[low]==ch[high])
+        {
+            low++;
+            high--;
+        }
+        if(low>high) return true;
+        
+        
+           return isPallin(ch,low+1,high)|| isPallin(ch,low,high-1);
+        
+    }
+}
