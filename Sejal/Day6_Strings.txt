@@ -1,0 +1,40 @@
+// LEETCODE : 659 · Encode and Decode Strings
+
+public class Solution {
+    /*
+     * @param strs: a list of strings
+     * @return: encodes a list of strings to a single string.
+     */
+    public String encode(List<String> strs) {
+      // format::  length of the string + # + word
+      String s1="";
+        for(String s:strs)
+        {
+            s1+=(s.length())+"#"+s;
+        }
+         System.out.println(s1);
+        return s1;
+
+    }
+
+    /*
+     * @param str: A string
+     * @return: dcodes a single string to a list of strings
+     */
+    public List<String> decode(String str) {
+     
+     List<String> deco=new ArrayList<>();
+     int i=0;
+        while(i<str.length())
+        {
+            int pos=str.indexOf("#",i);
+            int len=Integer.parseInt(str.substring(i,pos));
+            System.out.println(len);
+            pos++;
+            deco.add(str.substring(pos,pos+len));
+             System.out.println(deco);
+            i=pos+len;
+        }
+return deco;
+    }
+}
