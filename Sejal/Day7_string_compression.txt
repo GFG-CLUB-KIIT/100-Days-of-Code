@@ -1,0 +1,45 @@
+//LEETCODE :443. String Compression
+
+class Solution {
+    public int compress(char[] ch) {
+     int n=ch.length;
+        String s1="";
+        int k=0;
+        for(int i=0;i<ch.length;)
+        {
+         
+         int c=1;
+            int j=i+1;
+         while(j<n && ch[i]==ch[j])
+         {
+              
+             c++;
+             j++;
+             
+         }
+         
+                 ch[k++]=(ch[i]);
+                
+                if(c>9)
+                {
+                    String temp= Integer.toString(c);
+                    for(int x=0;x<temp.length();x++)
+                    ch[k++]=temp.charAt(x);
+                }
+                else if(c!=1){
+                
+                ch[k++]= Integer.toString(c).charAt(0);
+            }
+            
+        i=j;
+          
+        }
+        // for(int i=0;i<s1.length();i++)
+        //       ch[i]=s1.charAt(i);
+       
+  
+          
+        
+        return k;
+    }
+}
