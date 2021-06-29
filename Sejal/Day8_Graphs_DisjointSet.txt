@@ -1,0 +1,56 @@
+//Leetcode :947. Most Stones Removed with Same Row or Column
+//Q link: https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/
+
+
+class Solution {
+    public int removeStones(int[][] stones) {
+        
+        int n=stones.length;
+        if(n==1)
+            return 0;
+        int count=0;
+    
+        int parent[]=new int[n];
+        
+        for(int i=0;i<stones.length;i++)
+        {
+            parent[i]=i;
+               
+        }
+        
+            for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) 
+            {  
+                if(stones[i][0]==stones[j][0] ||stones[i][1]==stones[j][1])
+                     union(i,j,parent);
+            }
+            }
+      
+       
+    
+        for(int i=0;i<stones.length;i++)
+        {
+   if(parent[i]==i)
+       count++;
+           
+            
+        }
+          
+    
+        return n-count;
+    }
+      void union(int p1,int p2,int parent[])
+    {
+   
+        int u=findP(p1,parent);
+        int v=findP(p2,parent);
+        parent[v]=u;
+        
+    }
+     int findP(int u,int parent[])
+    {
+        if(parent[u]==u)
+            return u;
+        return parent[u]=findP(parent[u],parent);
+    }
+}
