@@ -1,0 +1,57 @@
+// LEETCODE :678. Valid Parenthesis String
+//Qlink : https://leetcode.com/problems/valid-parenthesis-string/
+
+class Solution {
+    public boolean checkValidString(String s){
+        int lcount=0,occupiedStar=0,unoccStar=0;
+        char ch[]=s.toCharArray();
+        for(char c:ch)
+        {
+        if(c=='(')
+            lcount++;
+            
+        else if(c=='*')
+        {
+            /// we will assume that we are considering it as a close parenthesis if there are extra                      openings
+            //greedily satisfying an opening bracket
+            if(lcount-occupiedStar>0)
+            {
+         // here we are doing lcount-occupiedStar bcoz when we are satisfying the (  with a star we                are not subtracting it with our lcount
+           
+                occupiedStar++;
+                
+            }
+            else
+                unoccStar++;
+        }
+    // means if charcter is a )
+        else{
+            // this means that all the star which we assumed to close has got satisfied and now we have 
+            //  still extra ( bracket which we need to close it with the real )
+            if(lcount-occupiedStar>0)
+                lcount--;
+            
+            //In this case it means that there is an extra closing bracket so we need to unoccupy one   
+            //    one of the star
+        
+            else if(occupiedStar>0)
+            {
+                 occupiedStar--;
+                unoccStar++; 
+                lcount--;
+            }
+            // now int his condition we have ab extra ) and there is a deficiency of ( bracket so we                   an occupied star the we will mark it as open
+            else if(unoccStar>0){
+                unoccStar--;
+            }
+            // this means we have an extra )  bracket and we don't have any other option
+            else{
+                return false;
+            }
+        } 
+        }
+        // this is a last check for extra open brackets;
+        return lcount-occupiedStar==0;
+}
+    
+}

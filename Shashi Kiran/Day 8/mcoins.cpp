@@ -1,8 +1,8 @@
-// Problem: D. Flowers
-// Contest: Codeforces - Codeforces Round #271 (Div. 2)
-// URL: https://codeforces.com/problemset/problem/474/D
-// Memory Limit: 256 MB
-// Time Limit: 1500 ms
+// Problem: Coins Game
+// Contest: SPOJ - Classical
+// URL: https://www.spoj.com/problems/MCOINS/en/
+// Memory Limit: 1536 MB
+// Time Limit: 1000 ms
 // 
 // Powered by CP Editor (https://cpeditor.org)
 
@@ -30,36 +30,34 @@ using namespace std;
 #define yes             cout<<"YES\n"
 #define ln              cout<<"\n";
 
-int dp[100005];
-int K;
-int fun(int i){
-
-	if(i==0) return 1;
-	if(i<0) return 0;
-	
-	if(dp[i]!=-1) return dp[i];
-
-	int	ans1 = fun(i-K);
-	int ans2 = fun(i-1);
-	int ans = (ans1+ans2)%mod;
-	return dp[i] = ans;
+int k,l;
+int dp[1000006];
+int play(int n){
+	if(n==0){
+		return 0;
+	}
+	if(dp[n]!=-1) return dp[n];
+	int ans = 0;
+	ans |= !(play(n-1));
+	if(n>=k)
+		ans|= !(play(n-k));
+	if(n>=l)
+		ans|= !(play(n-l));
+	dp[n] = ans;
+	return ans;
 }
 
 void solve(){
-    int n,k;
-    cin>>n>>k;
-    K=k;
+    int m;
+    cin>>k>>l>>m;
     fill(dp,-1);
-    int pref[200002];
-    fill(pref,0);
-    pref[0] = 0;
-    fin(i,1,100004) pref[i] = (pref[i-1] + fun(i))%mod;
-    
-    while(n--){
-    	int a,b;
-    	cin>>a>>b;
-    	cout<<(pref[b] - pref[a-1] + mod)%mod<<endl;
+    string s = "BA";
+    while(m--){
+    	int n;
+    	cin>>n;
+		cout<<s[play(n)];
     }
+    ln;
 }
 
 signed main(){
