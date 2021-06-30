@@ -65,7 +65,7 @@ void solve(){
     f(i,n) m[ar[i]]++;
 	for(auto i:m) v.pb({i.F,i.S});
 	sort(v.begin(),v.end());
-	
+		
 	pref[0] = 0;
 	N = v.size();
 	f(i,N) pref[i+1] = pref[i] + v[i].S;
