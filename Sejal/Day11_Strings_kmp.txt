@@ -1,0 +1,62 @@
+// LEETCODE :28. Implement strStr()
+// QLink: https://leetcode.com/problems/implement-strstr/
+
+class Solution {
+    public int strStr(String haystack, String needle) {
+       
+        int n=haystack.length();
+        int m=needle.length();
+        if(needle.length()==0)
+            return 0;
+       if(m>n)
+           return -1;
+        
+        //finding LPS
+        int lps[]=new int[m];
+        lps[0]=0;
+        int i=1;
+        for(i=1;i<m;i++)
+        {
+            //compute lps[i]
+            // first bubble
+            int j=lps[i-1];
+            // compute untill I find a suitable bubble
+            while(j>0 && needle.charAt(j)!= needle.charAt(i))
+            {
+               j=lps[j-1]; 
+            }  
+            
+             if(needle.charAt(j)!= needle.charAt(i))
+                 lps[i]=0;
+            else
+                lps[i]=j+1;
+        }
+        
+        
+        //KMP algorithm
+        
+        // we have our lps with us
+        // lps[i]: longest common prefix which is also a suffix for pattern patter[0..i]
+         
+     i=0;
+        int j=0;
+    while(i<n)
+    {
+       
+        while(j<m && i<n &&  haystack.charAt(i)==needle.charAt(j) )
+        {
+            i++;
+            j++;
+        }
+        
+         
+        if(j==m)
+           return i-m;
+        if(j==0)
+            i++;
+        else
+            j=lps[j-1];
+    }
+        return -1;
+    }
+}
