@@ -13,6 +13,7 @@ public:
         return vector<int>(A.begin() + left, A.begin() + left + k); //slicing the array;
         
     }
+    
 };
 
 
