@@ -1,6 +1,6 @@
-// Problem: D - Knapsack 1
+// Problem: F - LCS
 // Contest: AtCoder - Educational DP Contest
-// URL: https://atcoder.jp/contests/dp/tasks/dp_d
+// URL: https://atcoder.jp/contests/dp/tasks/dp_f
 // Memory Limit: 1024 MB
 // Time Limit: 2000 ms
 // 
@@ -29,33 +29,38 @@ using namespace std;
 #define no              cout<<"NO\n"
 #define yes             cout<<"YES\n"
 #define ln              cout<<"\n";
-int n,w;
-int ar[100005][2];
-int dp[101][100005];
-int fun(int i,int wt){
-	// cout<<i<<" "<<wt<<endl;
-	if(i==n or wt==w) return 0;
-	if(wt>w) return INT_MIN;
-	if(dp[i][wt]!=-1) return dp[i][wt];
-	int ans1=0;
-	if(wt+ar[i][0]<=w)
-		ans1 = ar[i][1] + fun(i+1,wt+ar[i][0]);
- 	int ans2 = fun(i+1,wt);
- 	int ans = max(ans1,ans2);
- 	dp[i][wt] = ans;
- 	cout<<i<<" "<<wt<<" "<<dp[i][wt]<<endl;
- 	return ans;
+
+
+string ans;
+int dp[5000][5000];
+int fun(string &s, string &t, int i,int j,string temp){
+	// cout<<i<<" "<<j<<endl;
+	if(i==s.length() or j==t.length()){
+		if(temp.length()>ans.length())
+			ans = temp;
+		return 0;
+	}
+	// if(dp[i][j]!=-1) return dp[i][j];
+	int ans;
+	if(s[i]==t[j]){
+		temp+=s[i];
+		ans = 1 + fun(s,t,i+1,j+1,temp);
+		temp.pop_back();
+	}else{
+		int ans1 = fun(s,t,i+1,j,temp);
+		int ans2 = fun(s,t,i,j+1,temp);
+		ans = max(ans1,ans2);
+	}
+	return dp[i][j] = ans;
 }
 
 void solve(){
-  	cin>>n>>w;
-  	fill(dp,-1);
-	// int ar[n][2];
-	for(int i=0;i<n;i++){
-		cin>>ar[i][0]>>ar[i][1];
-	}
-	cout<<fun(0,0)<<endl;
-	
+	fill(dp,-1);
+  	string s;
+  	string t;
+  	cin>>s>>t; 
+	fun(s,t,0,0,"") ;
+  	cout<<ans<<endl;
 }
 
 signed main(){
