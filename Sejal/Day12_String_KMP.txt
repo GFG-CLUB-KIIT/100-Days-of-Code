@@ -1,0 +1,54 @@
+// LEETCODE :686. Repeated String Match
+// QLINK: https://leetcode.com/problems/repeated-string-match/
+
+class Solution {
+    public int repeatedStringMatch(String a, String b) {
+     
+        
+        // Patter is B
+        // Text is A
+          int nA=a.length();
+          int nB=b.length();
+        // construct an lps of B
+        int lps[]=new int[b.length()];
+        lps[0]=0;
+      
+        for(int i=1;i<nB;i++)
+        {
+            int j=lps[i-1];
+            while(j>0 && b.charAt(j)!=b.charAt(i))
+            {
+                j=lps[j-1];
+            }
+            if(b.charAt(j)!=b.charAt(i))
+                lps[i]=0;
+            else
+                lps[i]=j+1;
+        }
+        
+        //Actual KMP
+        int total_len= nA*((nB/nA)+2); 
+        
+        int i=0,j=0;
+        while(i<total_len)
+        {
+            while(j<nB  && a.charAt(i%nA)==b.charAt(j))
+            {
+                i++;
+                j++;
+            }
+            if(j==nB)
+            {
+                System.out.println(i+" "+nA);
+             return (int)Math.ceil((float)i/nA);   
+            } 
+            if(j==0)
+                i++;
+            else
+            {
+                j=lps[j-1];
+            }
+        }
+        return -1;
+    }
+}
