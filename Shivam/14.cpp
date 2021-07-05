@@ -1,4 +1,4 @@
-// Dijkstra'as algorithm
+// dijskstra's algo
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -42,7 +42,8 @@ int main()
     ans[0].visited = true;
     int i;
     int a = pq.top().second;
-    for(i=a;i<v;i++)
+	int cnt = 0;
+    while(cnt < v)
     {
         for(int j=0;j<v;j++)
         {
@@ -58,14 +59,11 @@ int main()
             }
         }
         ans[i].visited = true;
-        if(a == v - 1)
-        {
-            break;
-        }
+		cnt++;
         a = pq.top().second;
         while(1)
         {
-            if(ans[a].visited)
+            if(ans[a].visited && pq.size() > 1)
             {
                 pq.pop();
                 a = pq.top().second;
