@@ -1,0 +1,60 @@
+// Problem Link : https://codeforces.com/contest/1473/problem/B
+#include <algorithm>
+#include <bits/stdc++.h>
+#include <cctype>
+#include <functional>
+#include <string>
+#define SIZE 100008
+#define mod(ll) (1e9 + 7)
+#define vi vector<int>
+#define max(a, b) (a > b ? a : b)
+#define INF 0x3f3f3f3f
+#define min(a, b) (a < b ? a : b)
+#define abs(a) ((a) > 0 ? (a) : -(a))
+#define all(a) a.begin(), a.end()
+#define maxelem(a) *max_element(all(a))
+#define minelem(a) *min_element(all(a))
+#define lower(s) transform(s.begin(), s.end(), s.begin(), ::tolower)
+#define upper(s) transform(s.begin(), s.end(), s.begin(), ::toupper)
+#define pb push_back
+#define pi pair<ll, ll>
+#define ll long long int
+#define pqq priority_queue
+#define reverse(a) reverse(all(a))
+#define IOS                                                                    \
+  ios_base::sync_with_stdio(false);                                            \
+  cin.tie(NULL);                                                               \
+  cout.tie(NULL);
+#define rep(i, n) for (int i = 0; i < n; ++i)
+#define c(a) cout << a << "\n";
+using namespace std;
+void solve() {
+  string s, t;
+  cin >> s >> t;
+  ll n = s.size(), m = t.size();
+  ll find_lcm = n * m / __gcd(n, m);
+  // cout << find_lcm << endl;
+  string temp1 = "", temp2 = "";
+  for (int i = 0; i < find_lcm / n; i++) {
+    temp1 += s;
+  }
+  for (int i = 0; i < find_lcm / m; i++) {
+    temp2 += t;
+  }
+  // cout << temp1 << " " << temp2 << " "
+  //      << "\n";
+  if (temp1.compare(temp2) == 0) {
+    cout << temp1 << "\n";
+  } else {
+    cout << -1 << "\n";
+  }
+}
+
+int main() {
+  IOS ll t;
+  cin >> t;
+  while (t--) {
+    solve();
+  }
+  return 0;
+}
