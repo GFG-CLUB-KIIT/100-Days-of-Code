@@ -1,0 +1,23 @@
+// LEETCODE: 852. Peak Index in a Mountain Array
+// https://leetcode.com/problems/peak-index-in-a-mountain-array/
+
+class Solution {
+    public int peakIndexInMountainArray(int[] arr) {
+        // First T
+        // F*T*
+        // P(x)= arr[i]>arr[i+1]
+        int n=arr.length,low,high,mid;
+        
+        low=0;high=n-1;
+        while(low<high)
+        {
+             mid=low+(high-low)/2;
+            if(arr[mid]>arr[mid+1])
+                high=mid;
+            else
+                low=mid+1;
+        }
+        return low;
+        
+    }
+}
