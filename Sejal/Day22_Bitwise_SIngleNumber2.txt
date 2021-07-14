@@ -1,0 +1,23 @@
+// LEETCODE : 137. Single Number II
+// https://leetcode.com/problems/single-number-ii/
+
+class Solution {
+    public int singleNumber(int[] arr) {
+    int num=0;
+        
+        for(int i=0;i<32;i++)
+        {int c=0;
+            for(int j=0;j<arr.length;j++)
+            {
+                if((arr[j]&(1<<i))!=0)
+                    c++;
+            }
+         if(c%3==1)
+             num=num|(1<<i);
+        }
+    return num;
+        
+    }
+}
+
+
