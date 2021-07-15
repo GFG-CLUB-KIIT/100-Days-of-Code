@@ -9,6 +9,9 @@
  * }
  */
 class Solution {
+
+
+
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if(l1==null && l2==null){
              return null;
@@ -57,6 +60,7 @@ class Solution {
                 temp.next=new ListNode(l1.val);
                 l1=l1.next;
         }
+
          while(l2!=null){
                 ListNode temp=head;
                 while(temp.next!=null){
