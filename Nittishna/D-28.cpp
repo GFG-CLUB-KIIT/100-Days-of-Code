@@ -8,6 +8,7 @@ int main(){
     cout << "Enter roman value:";
     cin >> roman;
     cout << romanToInt(roman);
+    return 0;
 }
 int romanToInt(string s) {
         int ans=0;
